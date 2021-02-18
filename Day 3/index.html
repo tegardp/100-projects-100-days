@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+  <body>
+    <div class="valign-wrapper" style="width:100%;height:100%;position: absolute;">
+        <div class="valign" style="width:100%;">
+            <div class="container">
+                <div class="row">
+                    <div class="col s6 offset-s3">
+                        <div class="card">
+                            <div class="card-content">
+                                <span class="card-title red-text text-lighten-1 valign center ">Love Calculator</span>
+                                <div class="row">
+                                    <form id="love-calc-form">
+                                        <div class="input-field col s12">
+                                            <input type="text" id="name1" required class="validate">
+                                            <label for="name1">Your Name</label>
+                                        </div>
+                                        <div class="input-field col s12">
+                                            <input type="text" id="name2" required class="validate">
+                                            <label for="name2">Your Lover's Name</label>
+                                        </div>
+                                        <div class="input-field col s12">
+                                            <input type="submit" value="Calculate" class="btn btn-block col s12 red lighten-2">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="row" id="results">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </div>  
+  </body>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+      document.getElementById('results').style.display = 'none';
+      document.getElementById('love-calc-form').addEventListener('submit', function (e) {
+        let countTrue = 0;
+        let countLove = 0;
+        const name1 = document.getElementById('name1').value;
+        const name2 = document.getElementById('name2').value;
+        const concatName = name1.toLowerCase() + name2.toLowerCase();
+        for(let i=0; i < concatName.length; i++) {
+            if(concatName[i] == 't' || concatName[i] == 'r' || concatName[i] == 'u' || concatName[i] == 'e' && countTrue < 10 ) {
+                countTrue++;
+            }
+            if(concatName[i] == 'l' || concatName[i] == 'o' || concatName[i] == 'v' || concatName[i] == 'e' && countTrue < 10 ) {
+                countLove++;
+            }
+        }
+
+        const calc = countTrue * 10 + countLove;
+        let msg;
+        if(calc < 10 || calc > 90) {
+            msg = "Your score is " + calc +", you go together like coke and mentos.";
+        } else if (calc > 40 || calc < 50){
+            msg = "Your score is " +calc +", you are alright together.";
+        } else {
+            msg = "Your score is" +calc;
+        }
+
+        if (name1 != '' && name2 != 0) {
+            const results = document.getElementById('results');
+            results.innerHTML = `<blockquote>${msg}</blockquote>`
+            results.style.display = 'block';
+        }
+        e.preventDefault();
+      })
+  </script>
+</html>
+      

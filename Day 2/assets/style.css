@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html,body {
+    font-family: 'Montserrat';
+    height: 100%;
+}
+
+.bg-dark {
+    background-color:
+    #2f2f2f;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 2rem 3rem 2rem 3rem;   
+}
+
+form {
+    margin-top: 1rem;
+}
+
+.card div {
+    min-width: 300px;
+    margin-top: 0.5rem;
+    display:flex;
+    flex-direction:column;
+    width: 98%;
+}
+
+.card #loading {
+    text-align: center;
+}
+
+.card div input {
+    height: 2.5rem;
+    padding-left: 0.8rem;
+    font-size: 1rem;
+}
+
+.card div button{
+    margin-top: 1rem;
+    font-size: 1rem;
+    padding: 0.5rem;
+    background-color: #2f2f2f;
+    color: white;
+    font-weight:bold;
+}
+
+.input-group-text {
+    font-size: 0.8rem;
+    font-weight: 300;
+    margin-bottom: 0.2rem;
+}

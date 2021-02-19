@@ -1,0 +1,78 @@
+html,body {
+    height: 100%;
+    font-family: 'Montserrat';
+}
+
+body {
+    background-color:lightblue;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    padding: 2.5rem 4.5rem 4rem 4.5rem;
+}
+
+.card h1 {
+    text-align: center;
+    font-size: 1.75rem;
+}
+.card form {
+    margin-top: 1.25rem;
+}
+.card div{
+    width: 100%;
+}
+.card div input{
+    margin-top: 0.75rem;
+    width: 98%;
+    height: 1.75rem;
+    border: 1px solid rgba(0, 0, 0, 0.2)
+}
+.card input:focus {
+    outline: none !important;
+    border: 1.7px solid rgba(0, 0, 0, 1)
+}
+.card button{
+    align-self: center;
+    width: 100%;
+    background-color:darkviolet;
+    color: white;
+    border: transparent;
+    border-radius: 5px;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+}
+.card button:hover{
+    background-color:rgb(148, 90, 211);
+}
+.card button:focus, .card button:active {
+    outline: none !important;
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+    -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+         box-shadow: inset 0px 0px 5px #c1c1c1;
+}
+
+
+
+
+.card #results {
+    margin-top: 1.5rem;
+}
+
+.brandname {
+    color:darkviolet;
+}
+
+hr {width:100%}
